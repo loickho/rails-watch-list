@@ -1,7 +1,16 @@
-<h1>List of lists</h1>
+<div class="banner">
+  <div class="card-category"
+    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path("theater")%>')"
+  >
+    <h2>welcome to your lists</h2>
+  </div>
+</div>
+
 <ul>
   <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
+    <div class="card-product">
+      <li><%= link_to list.name, list_path(list) %></li>
+    </div>
   <% end %>
 </ul>
 
